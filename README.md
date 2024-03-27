@@ -35,6 +35,9 @@ This repository is the pytorch implementation of our paper, **NeRF-MAE** (Code C
 <img src="demo/nerf-mae_teaser.jpeg" width="100%">
 </p>
 
+_________________ 
+
+
 <p align="center">
 <img src="demo/comparison_mae.jpeg" width="100%">
 </p>
