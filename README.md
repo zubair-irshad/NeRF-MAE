@@ -1,4 +1,4 @@
-# NeRF-MAE : Masked AutoEncoders for Self Supervised 3D representation Learning for Neural Radiance Fields
+# NeRF-MAE: Masked AutoEncoders for Self Supervised 3D representation Learning for Neural Radiance Fields
 
 This repository is the pytorch implementation of our paper, **NeRF-MAE** (Code Coming Soon!)
 
@@ -14,7 +14,7 @@ This repository is the pytorch implementation of our paper, **NeRF-MAE** (Code C
 
 
 
-**NeRF-MAE : Masked AutoEncoders for Self Supervised 3D representation Learning for Neural Radiance Fields**
+**NeRF-MAE: Masked AutoEncoders for Self Supervised 3D representation Learning for Neural Radiance Fields**
 
 <a href="https://zubairirshad.com"><strong>Muhammad Zubair Irshad</strong></a>
 ·
