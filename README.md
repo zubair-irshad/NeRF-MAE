@@ -10,7 +10,7 @@ This repository is the pytorch implementation of our paper, **NeRF-MAE** (Code C
  <img align="right" src="demo/tri-logo.png" width="20%"/>
 </a>
 
-### [Project Page](https://nerf-mae.github.io/) | [arXiv](https://arxiv.org/abs/2308.12967) | [PDF](https://arxiv.org/pdf/2308.12967.pdf)
+### [Project Page](https://nerf-mae.github.io/) | [arXiv](https://arxiv.org/abs/2404.01300) | [PDF](https://arxiv.org/pdf/2404.01300.pdf)
 
 
 
