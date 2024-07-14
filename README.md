@@ -76,14 +76,12 @@ This repository is the pytorch implementation of our **ECCV 2024** paper, **NeRF
 If you find this repository or our dataset useful, please consider citing:
 
 ```
-@misc{irshad2024nerfmae,
-    title={NeRF-MAE: Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural Radiance Fields}, 
-    author={Muhammad Zubair Irshad and Sergey Zakahrov and Vitor Guizilini and Adrien Gaidon and Zsolt Kira and Rares Ambrus},
-    year={2024},
-    eprint={2404.01300},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
-}
+@inproceedings{irshad2024nerfmae,
+    title={NeRF-MAE: Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural Radiance Fields},
+    author={Muhammad Zubair Irshad and Sergey Zakharov and Vitor Guizilini and Adrien Gaidon and Zsolt Kira and Rares Ambrus},
+    journal={European Conference on Computer Vision (ECCV)},
+    year={2024}
+    }
 ```
 
 ### Contents
