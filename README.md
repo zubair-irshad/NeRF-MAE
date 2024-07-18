@@ -73,7 +73,7 @@ This repository is the pytorch implementation of our **ECCV 2024** paper, **NeRF
 
 ## Citation
 
-If you find this repository or our dataset useful, please consider citing:
+If you find this repository or our dataset useful, please star ⭐ this repository and consider citing 📝:
 
 ```
 @inproceedings{irshad2024nerfmae,
@@ -110,13 +110,30 @@ The code was built and tested on **cuda 11.3**
 
 Download the preprocessed datasets here. 
 
-- Pretraining dataset (comprising NeRF radiance and density grids). [Download link]()
-- Finetuning dataset (comprising NeRF radiance and density grids and bounding box/semantic labelling annotations). [3D Object Detection](), [3D Semantic Segmentation (Coming Soon)](), [Voxel-Super Resolution (Coming Soon)]()
+- Pretraining dataset (comprising NeRF radiance and density grids). [Download link](https://s3.amazonaws.com/tri-ml-public.s3.amazonaws.com/github/nerfmae/NeRF-MAE_pretrain.tar.gz)
+- Finetuning dataset (comprising NeRF radiance and density grids and bounding box/semantic labelling annotations). [3D Object Detection (Provided by NeRF-RPN)](https://drive.google.com/drive/folders/1q2wwLi6tSXu1hbEkMyfAKKdEEGQKT6pj), [3D Semantic Segmentation (Coming Soon)](), [Voxel-Super Resolution (Coming Soon)]()
+
+
+Extract pretraining and finetuning dataset under ```NeRF-MAE/datasets```. The directory structure should look like this:
+
+```
+NeRF-MAE
+├── pretrain
+│   ├── features
+│   └── nerfmae_split.npz
+└── finetune
+    └── front3d_rpn_data
+        ├── features
+        ├── aabb
+        └── obb
+```
 
 
 Note: The above datasets are all you need to train and evaluate our method. Bonus: we will be releasing our multi-view rendered posed RGB images from FRONT3D, HM3D and Hypersim as well as Instant-NGP trained checkpoints soon (these comprise over 1.6M+ images and 3200+ NeRF checkpoints)
 
-Please note that our dataset was generated using the instruction from [NeRF-RPN]([NeRF-RPN](https://github.com/lyclyc52/NeRF_RPN)). Please consider citing both our work and NeRF-RPN if you find this dataset useful in your research. 
+Please note that our dataset was generated using the instruction from [NeRF-RPN]([NeRF-RPN](https://github.com/lyclyc52/NeRF_RPN)) and [3D-CLR](https://vis-www.cs.umass.edu/3d-clr/). Please consider citing our work, NeRF-RPN and 3D-CLR if you find this dataset useful in your research. 
+
+Please also note that our dataset uses [Front3D](https://arxiv.org/abs/2011.09127), [Habitat-Matterport3D](https://arxiv.org/abs/2109.08238), [HyperSim](https://github.com/apple/ml-hypersim) and [ScanNet](https://www.scan-net.org/) as the base version of the dataset i.e. we train a NeRF per scene and extract radiance and desnity grid as well as aligned NeRF-grid 3D annotations. Please read the term of use for each dataset if you want to utilize the posed multi-view images for each of these datasets. 
 
 ## 💫 Usage (Coming Soon)
 
