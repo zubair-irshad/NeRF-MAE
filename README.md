@@ -54,10 +54,12 @@ This repository is the pytorch implementation of our **ECCV 2024** paper, **NeRF
 
 ## 🏷️ TODO 
 
-- [x] Release training code
+- [x] Release large-scale pretraining code
 - [x] Release NeRF-MAE dataset comprising radiance and density grids
+- [x] Release 3D object detection finetuning and eval code
 - [ ] Pretrained NeRF-MAE checkpoints and out-of-the-box model usage
 - [ ] Release multi-view rendered images and Instant-NGP checkpoints (totalling 1.6M+ posed images and 3200+ trained NeRF checkpoints)
+- [ ] 3D semantic labelling and voxel-super resolution finetuning and evaluation code
 
 ## NeRF-MAE Model Architecture
 <p align="center">
@@ -137,11 +139,9 @@ Please also note that our dataset uses [Front3D](https://arxiv.org/abs/2011.0912
 
 ## 💫 Usage (Coming Soon)
 
-NeRF-MAE (package: nerf-mae) is structured to provide easy access to pretrained NeRF-MAE models (and reproductions), to facilitate use for various downstream tasks. Our pretraining provides an easy-to-access embedding of any NeRF scene, which can be used for a variety of downstream tasks in a straightforwaed way.
+NeRF-MAE (package: nerf-mae) is structured to provide easy access to pretrained NeRF-MAE models (and reproductions), to facilitate use for various downstream tasks. Our pretraining provides an easy-to-access embedding of any NeRF scene, which can be used for a variety of downstream tasks in a straightforwaed way. Package, usage and our pretrained checkpoints are coming soon. 
 
-Using a pretrained NeRF-MAE model is easy:
-
-Navigate to **nerf-mae** folder and run pretraining script. 
+<!-- Using a pretrained NeRF-MAE model is easy: Navigate to **nerf-mae** folder and run pretraining script.  -->
 
 ## 📉 Pretraining
 
@@ -153,6 +153,8 @@ bash train_mae3d.sh
 ```
 
 Checkout **train_mae3d.sh** file for a complete list of all hyperparameters such as ```num_epochs```, ```lr```, ```masking_prob``` etc. 
+
+Checkpoints will be saved at a regular interval of 200 epochs, for reproducing the paper results, we utilize the checkpoints at 1200 epochs.
 
 
 ## 📊 Finetuning
@@ -179,41 +181,9 @@ cd nerf-rpn
 bash train_fcos.sh
 ```
 
-### 3D Semantic Segmentation
-Navigate to **nerf-rpn** folder and run finetuning script. 
+For evaluating our pretrained weights or finetuning from scratch, use ```bash test_fcos_pretrained.sh``` or ```bash test_fcos.sh```
 
-To run finetuning with our pretrained weights:
-
-```
-cd nerf-rpn
-bash train_fcos_pretrained.sh
-```
-
-To run finetuning with starting from scratch weights:
-
-```
-cd nerf-rpn
-bash train_fcos.sh
-```
-
-### 3D Voxel Super-Resolution
-Navigate to **nerf-rpn** folder and run finetuning script. 
-
-To run finetuning with our pretrained weights:
-
-```
-cd nerf-rpn
-bash train_fcos_pretrained.sh
-```
-
-To run finetuning with starting from scratch weights:
-
-```
-cd nerf-rpn
-bash train_fcos.sh
-```
-
-Checkout **train_fcos_pretraining.sh** file for a complete list of all hyperparameters such as ```mae_checkpoint```, ```num_epochs```, ```lr```, ```masking_prob``` etc. 
+Checkout **train_fcos_pretraining.sh** and ```test_fcos_pretrained.sh``` file for a complete list of all hyperparameters such as ```mae_checkpoint```, ```num_epochs```, ```lr```, ```masking_prob``` etc. Code for finetuning and eval for our downstream tasks are based on [NeRF-RPN's](https://github.com/lyclyc52/NeRF_RPN) implementation.
 
 ## Acknowledgments
 This code is built upon the implementation from [NeRF-RPN](https://github.com/lyclyc52/NeRF_RPN).
