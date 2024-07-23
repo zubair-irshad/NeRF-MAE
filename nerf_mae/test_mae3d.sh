@@ -5,7 +5,7 @@ set -e
 
 dataset_name="front3d"
 
-DATA_ROOT="dataset/pretrain"
+DATA_ROOT="../dataset/pretrain"
 
 
 python3 -u run_swin_mae3d.py \
