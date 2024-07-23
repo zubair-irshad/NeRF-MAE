@@ -14,3 +14,4 @@ kornia
 pandas
 h5py
 opencv-python
+einops

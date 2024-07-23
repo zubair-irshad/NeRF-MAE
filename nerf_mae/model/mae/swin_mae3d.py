@@ -9,13 +9,13 @@ from functools import partial
 import random
 import sys
 
-# sys.path.append("..")
+sys.path.append("..")
 from einops import rearrange
 
 
-# ===========================
-sys.path.append("/home/zubairirshad/NeRF_MAE_internal")
-# ===========================
+# # ===========================
+# sys.path.append("/home/zubairirshad/NeRF_MAE_internal")
+# # ===========================
 
 from nerf_mae.model.mae.torch_utils import *
 from nerf_mae.model.mae.unetr_block import UnetrBasicBlock, UnetrUpBlock, UnetOutBlock
