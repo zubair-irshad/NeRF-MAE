@@ -337,7 +337,7 @@ class Trainer:
         torch.multiprocessing.set_sharing_strategy("file_system")
 
         if args.wandb and rank == 0:
-            wandb.login(key="c4779119ee9d0aea91b4afb315bafb0bac03be91")
+            wandb.login()
             wandb.init(
                 project="nerf-mae",
                 tags=[self.args.tags],

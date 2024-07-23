@@ -323,7 +323,7 @@ class Trainer:
         torch.multiprocessing.set_sharing_strategy("file_system")
 
         if args.wandb and rank == 0:
-            wandb.login(key="c4779119ee9d0aea91b4afb315bafb0bac03be91")
+            wandb.login()
             wandb.init(
                 project="nerf-mae",
                 tags=[self.args.tags],
@@ -668,10 +668,10 @@ class Trainer:
             self.optimizer.step()
             self.scheduler.step()
 
-            self.logger.debug(
-                f"GPU {self.device_id} Epoch {epoch} Iter {i} {batch[-1]} "
-                f"loss: {loss.item():.6f}"
-            )
+            # self.logger.debug(
+            #     f"GPU {self.device_id} Epoch {epoch} Iter {i} {batch[-1]} "
+            #     f"loss: {loss.item():.6f}"
+            # )
 
             if self.world_size > 1:
                 dist.barrier()

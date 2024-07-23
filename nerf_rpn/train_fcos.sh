@@ -3,19 +3,12 @@
 set -x
 set -e
 
-#choices="hypersim", "front3d", "scannet"
-
-# DATA_ROOT=/wild6d_data/zubair/nerf_rpn/front3d_rpn_data
-# DATA_ROOT=/wild6d_data/zubair/nerf_rpn/scannet_rpn_data
-
 resolution=160
 dataset_name="front3d"
 if [ "$dataset_name" == "hypersim" ]; then
     resolution=200
 fi
-# DATA_ROOT="/wild6d_data/zubair/nerf_rpn/${dataset_name}_rpn_data"
-DATA_ROOT="/datasets/nerf_rpn/${dataset_name}_rpn_data"
-# DATA_ROOT="/wild6d_data/zubair/nerf_rpn/${dataset_name}_rpn_data_160"
+DATA_ROOT="../dataset/finetune/${dataset_name}_rpn_data"
 
 python3 -u run_fcos.py \
 --mode train \
@@ -38,7 +31,7 @@ python3 -u run_fcos.py \
 --rotated_bbox \
 --log_to_file \
 --nms_thresh 0.3 \
---batch_size 8 \
+--batch_size 4 \
 --gpus 0,1,2 \
 --percent_train 1.0 \
 --normalize_density \
@@ -46,14 +39,3 @@ python3 -u run_fcos.py \
 --dataset "${dataset_name}" \
 --dataset_split "${DATA_ROOT}/${dataset_name}_split.npz" \
 --save_path "/datasets/nerf_mae/results/${dataset_name}_reproduce_dgx"
-
-# --checkpoint "/wild6d_data/zubair/nerf_mae/results/nerfrpn_checkpoints/front3d_fcos_swinS.pt"
-# --checkpoint "/wild6d_data/zubair/nerf_mae/results/front3d_fcos_swinmae_1515_0.75_color_only_maskremovergb_ptmae1.0_augmentation/model_best.pt"
-
-
-
-#Scannet
-# --tags scannet_fcos_swin_2k_pt1.0_wo_normdensity \
-# --dataset scannet \
-# --dataset_split ${DATA_ROOT}/scannet_split.npz \
-# --save_path /wild6d_data/zubair/nerf_mae/results/scannet_fcos_swin_2k_pt1.0_wo_normdensity \
