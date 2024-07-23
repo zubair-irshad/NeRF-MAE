@@ -5,7 +5,7 @@ set -e
 
 resolution=160
 dataset_name="front3d"
-split_name = "3dfront"
+split_name="3dfront"
 if [ "$dataset_name" == "hypersim" ]; then
     resolution=200
 fi
