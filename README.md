@@ -108,6 +108,16 @@ pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 -f https://download.py
 ```
 The code was built and tested on **cuda 11.3**
 
+Compile CUDA extension, to run downstream task finetuning, as described in [NeRF-RPN](https://github.com/lyclyc52/NeRF_RPN):
+
+```bash
+cd $NeRF-MAE repo
+cd nerf_rpn/model/rotated_iou/cuda_op
+python setup.py install
+cd ../../../..
+
+```
+
 ## ⛳ Dataset
 
 Download the preprocessed datasets here. 

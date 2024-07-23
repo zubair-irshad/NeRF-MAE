@@ -6,7 +6,7 @@ set -e
 resolution=160
 dataset_name="front3d"
 
-DATA_ROOT="/wild6d_data/zubair/nerf_rpn/front3d"
+DATA_ROOT="../dataset/finetune/${dataset_name}_rpn_data"
 
 python3 -u run_fcos.py \
 --mode eval \
@@ -24,5 +24,5 @@ python3 -u run_fcos.py \
 --normalize_density \
 --dataset "${dataset_name}" \
 --dataset_split "${DATA_ROOT}/${dataset_name}_split.npz" \
---save_path "/wild6d_data/zubair/nerf_mae/front3d_fcos_swin_1000" \
---checkpoint "/wild6d_data/zubair/nerf_mae/front3d_fcos_swin_1000/model_best.pt" \
+--save_path "output/nerf_mae/results/${dataset_name}_scratch" \
+--checkpoint "output/nerf_mae/results/${dataset_name}_scratch/model_best.pt" \

@@ -35,7 +35,7 @@ python3 -u run_fcos.py \
 --gpus 0,1,2 \
 --percent_train 1.0 \
 --normalize_density \
---tags "${dataset_name}_fcos_part4" \
+--tags "${dataset_name}_scratch" \
 --dataset "${dataset_name}" \
 --dataset_split "${DATA_ROOT}/${dataset_name}_split.npz" \
---save_path "/datasets/nerf_mae/results/${dataset_name}_reproduce_dgx"
+--save_path "output/nerf_mae/results/${dataset_name}_scratch"
