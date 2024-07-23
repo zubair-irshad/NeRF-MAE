@@ -50,7 +50,7 @@ def parse_args():
         "--dataset",
         "--dataset_name",
         default="hypersim",
-        choices=["hypersim", "front3d", "general", "scannet", "arkitscenes", "hm3d"],
+        choices=["hypersim", "front3d", "general", "scannet", "arkitscenes", "hm3d", "nerfmae"],
     )
 
     parser.add_argument("--features_path", default="", help="The path to the features.")
@@ -447,6 +447,7 @@ class Trainer:
                 self.args.dataset == "front3d"
                 or self.args.dataset == "arkitscenes"
                 or self.args.dataset == "hm3d"
+                or self.args.dataset == "nerfmae"
             ):
                 self.test_set = Front3DRPNDataset(
                     self.args.features_path,
@@ -520,6 +521,7 @@ class Trainer:
             self.args.dataset == "front3d"
             or self.args.dataset == "arkitscenes"
             or self.args.dataset == "hm3d"
+            or self.args.dataset == "nerfmae"
         ):
             self.train_set = Front3DRPNDataset(
                 self.args.features_path,

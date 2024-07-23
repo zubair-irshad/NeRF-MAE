@@ -6,7 +6,7 @@ set -e
 DATA_ROOT="../dataset/pretrain"
 resolution=160
 
-dataset_name="front3d"
+dataset_name="nerfmae"
 
 
 if [ "$dataset_name" == "hypersim" ]; then

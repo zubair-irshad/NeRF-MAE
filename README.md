@@ -160,7 +160,7 @@ Checkpoints will be saved at a regular interval of 200 epochs, for reproducing t
 **Notes**: 
 1. with default settings i.e. ```batch_size 32``` and gpus ```0,1,2,3,4,5,6,7```, the expected time it takes to pretrain is around 2 days. Please set these accoringly based on your machine's capacity.  
 
-2. The dataset_name is set to default as ```dataset_name="front3d"```. This is for convenince for the dataloader as it describes the format. Our pretraining data comprises of scenes from Front3D, Habitat Matterport3D and Hypersim. 
+2. The dataset_name is set to default as ```dataset_name="nerfmae"```. This is for convenince for the dataloader as it describes the format. Our pretraining data comprises of scenes from Front3D, Habitat Matterport3D and Hypersim. 
 
 
 ## 📊 Finetuning
