@@ -5,6 +5,7 @@ set -e
 
 resolution=160
 dataset_name="front3d"
+split_name = "3dfront"
 if [ "$dataset_name" == "hypersim" ]; then
     resolution=200
 fi
@@ -37,5 +38,5 @@ python3 -u run_fcos.py \
 --normalize_density \
 --tags "${dataset_name}_scratch" \
 --dataset "${dataset_name}" \
---dataset_split "${DATA_ROOT}/${dataset_name}_split.npz" \
+--dataset_split "${DATA_ROOT}/${split_name}_split.npz" \
 --save_path "output/nerf_mae/results/${dataset_name}_scratch"

@@ -8,7 +8,6 @@ resolution=160
 
 dataset_name="nerfmae"
 
-
 if [ "$dataset_name" == "hypersim" ]; then
     resolution=200
 fi

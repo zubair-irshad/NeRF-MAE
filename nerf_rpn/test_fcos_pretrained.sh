@@ -5,6 +5,7 @@ set -e
 
 resolution=160
 dataset_name="front3d"
+split_name = "3dfront"
 
 DATA_ROOT="/wild6d_data/zubair/nerf_rpn/${dataset_name}_rpn_data"
 
@@ -24,6 +25,6 @@ python3 -u run_fcos_pretrained.py \
 --batch_size 2 \
 --gpus 7 \
 --dataset "${dataset_name}" \
---dataset_split "${DATA_ROOT}/${dataset_name}_split.npz" \
+--dataset_split "${DATA_ROOT}/${split_name}_split.npz" \
 --save_path "output/nerf_mae/results/${dataset_name}_finetune" \
 --checkpoint "output/nerf_mae/results/${dataset_name}_finetune/model_best_ap50_ap25_0.6498397588729858_0.8356480598449707.pt" \

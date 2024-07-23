@@ -5,7 +5,7 @@ set -e
 
 resolution=160
 dataset_name="front3d"
-
+split_name = "3dfront"
 DATA_ROOT="../dataset/finetune/${dataset_name}_rpn_data"
 
 python3 -u run_fcos.py \
@@ -23,6 +23,6 @@ python3 -u run_fcos.py \
 --gpus 0 \
 --normalize_density \
 --dataset "${dataset_name}" \
---dataset_split "${DATA_ROOT}/${dataset_name}_split.npz" \
+--dataset_split "${DATA_ROOT}/${split_name}_split.npz" \
 --save_path "output/nerf_mae/results/${dataset_name}_scratch" \
 --checkpoint "output/nerf_mae/results/${dataset_name}_scratch/model_best.pt" \
