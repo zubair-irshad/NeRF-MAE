@@ -3,7 +3,7 @@
 set -x
 set -e
 
-DATA_ROOT="../datasets/pretrain"
+DATA_ROOT="../dataset/pretrain"
 resolution=160
 
 dataset_name="front3d"
