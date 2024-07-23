@@ -3,7 +3,7 @@
 set -x
 set -e
 
-dataset_name="front3d"
+dataset_name="nerfmae"
 
 DATA_ROOT="../dataset/pretrain"
 
@@ -14,7 +14,7 @@ python3 -u run_swin_mae3d.py \
 --features_path ${DATA_ROOT}/features \
 --normalize_density \
 --log_to_file \
---batch_size 8 \
+--batch_size 4 \
 --resolution 160 \
 --masking_prob 0.75 \
 --dataset "${dataset_name}" \
