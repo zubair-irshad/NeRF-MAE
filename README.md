@@ -139,7 +139,7 @@ Please also note that our dataset uses [Front3D](https://arxiv.org/abs/2011.0912
 
 ## 💫 Usage (Coming Soon)
 
-NeRF-MAE (package: nerf-mae) is structured to provide easy access to pretrained NeRF-MAE models (and reproductions), to facilitate use for various downstream tasks. Our pretraining provides an easy-to-access embedding of any NeRF scene, which can be used for a variety of downstream tasks in a straightforwaed way. Package, usage and our pretrained checkpoints are coming soon. 
+NeRF-MAE (package: nerf-mae) is structured to provide easy access to pretrained NeRF-MAE models (and reproductions), to facilitate use for various downstream tasks. This is for extracting good visual features from NeRFs if you don't have resources for large-scale pretraining. Our pretraining provides an easy-to-access embedding of any NeRF scene, which can be used for a variety of downstream tasks in a straightforwaed way. Package, usage and our pretrained checkpoints are coming soon. 
 
 <!-- Using a pretrained NeRF-MAE model is easy: Navigate to **nerf-mae** folder and run pretraining script.  -->
 
@@ -158,7 +158,7 @@ Checkpoints will be saved at a regular interval of 200 epochs, for reproducing t
 
 
 **Notes**: 
-1. with default settings i.e. ```batch_size 32``` and gpus ```0,1,2,3,4,5,6,7```, the expected time it takes to pretrain is around 2 days. Please set these accoringly based on your machine's capacity.  
+1. with default settings i.e. ```batch_size 32``` and gpus ```0,1,2,3,4,5,6,7``` on ```A100``` GPU, the expected time it takes to pretrain is around 2 days. Please set these accoringly based on your machine's capacity.  
 
 2. The dataset_name is set to default as ```dataset_name="nerfmae"```. This is for convenince for the dataloader as it describes the format. Our pretraining data comprises of scenes from Front3D, Habitat Matterport3D and Hypersim. 
 
