@@ -26,7 +26,7 @@ python3 -u run_swin_mae3d.py \
 --eval_interval 200 \
 --normalize_density \
 --log_to_file \
---batch_size 2 \
+--batch_size 1 \
 --resolution $resolution \
 --masking_prob 0.75 \
 --dataset "${dataset_name}" \
