@@ -5,7 +5,7 @@ set -e
 
 resolution=160
 dataset_name="front3d"
-split_name = "3dfront"
+split_name="3dfront"
 DATA_ROOT="../dataset/finetune/${dataset_name}_rpn_data"
 
 python3 -u run_fcos.py \
