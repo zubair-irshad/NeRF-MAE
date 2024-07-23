@@ -157,6 +157,12 @@ Checkout **train_mae3d.sh** file for a complete list of all hyperparameters such
 Checkpoints will be saved at a regular interval of 200 epochs, for reproducing the paper results, we utilize the checkpoints at 1200 epochs.
 
 
+**Notes**: 
+1. with default settings i.e. ```batch_size 32``` and gpus ```0,1,2,3,4,5,6,7```, the expected time it takes to pretrain is around 2 days. Please set these accoringly based on your machine's capacity.  
+
+2. The dataset_name is set to default as ```dataset_name="front3d"```. This is for convenince for the dataloader as it describes the format. Our pretraining data comprises of scenes from Front3D, Habitat Matterport3D and Hypersim. 
+
+
 ## 📊 Finetuning
 
 Our finetuning code is largely based on [NeRF-RPN](https://github.com/lyclyc52/NeRF_RPN). Infact, we use the same dataset as NeRF-RPN (unseen during pretraining), for finetuning. This makes sure our comparison with NeRF-RPN is based on the same architecture, the only difference is the network weights are started from scratch for NeRF-RPN, whereas in our case, we start with our pretrained network weights. Please see our paper for more details.

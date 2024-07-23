@@ -3,13 +3,9 @@
 set -x
 set -e
 
-# DATA_ROOT=/wild6d_data/zubair/nerf_rpn/front3d_rpn_data
-# DATA_ROOT=/wild6d_data/zubair/FRONT3D_MAE
-
 dataset_name="front3d"
-# DATA_ROOT="/wild6d_data/zubair/nerf_rpn/${dataset_name}_rpn_data"
 
-DATA_ROOT="/arkit_data/zubair/front3d_rpn_160_sparse4"
+DATA_ROOT="dataset/pretrain"
 
 
 python3 -u run_swin_mae3d.py \
@@ -27,6 +23,3 @@ python3 -u run_swin_mae3d.py \
 --gpus 5 \
 --percent_train 1.0 \
 --checkpoint /wild6d_data/zubair/nerf_mae/results/front3d_sparse4/epoch_1000.pt
-# --flip_prob 0.0 \
-# --rot_scale_prob 0.0 \
-# --rotate_prob 0.0 \
