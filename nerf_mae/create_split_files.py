@@ -2,14 +2,14 @@ import os
 import numpy as np
 
 split_file = (
-    f"/wild6d_data/zubair/nerf_rpn/front3d/front3d_split.npz"
+    f"/home/ubuntu/NeRF-MAE/dataset/pretrain/nerfmae_split.npz"
 )
 
-out_name = '3dfront_new'
+out_name = 'nerfmae_split_new'
 split = np.load(split_file)
 # Get the list of scenes from the features directory
 
-out_dir = "/wild6d_data/zubair/nerf_rpn/front3d"
+out_dir = "/home/ubuntu/NeRF-MAE/dataset/pretrain"
 features_dir = os.path.join(out_dir, "features")
 
 out_file = os.path.join(out_dir, out_name + "_split.npz")
