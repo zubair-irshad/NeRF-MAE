@@ -24,5 +24,5 @@ python3 -u run_fcos.py \
 --normalize_density \
 --dataset "${dataset_name}" \
 --dataset_split "${DATA_ROOT}/${split_name}_split.npz" \
---save_path "output/nerf_mae/results/${dataset_name}_scratch" \
---checkpoint "output/nerf_mae/results/${dataset_name}_scratch/model_best.pt" \
+--save_path "../output/nerf_mae/results/${dataset_name}_scratch" \
+--checkpoint "../output/nerf_mae/results/${dataset_name}_scratch/model_best.pt" \

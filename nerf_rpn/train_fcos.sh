@@ -39,4 +39,4 @@ python3 -u run_fcos.py \
 --tags "${dataset_name}_scratch" \
 --dataset "${dataset_name}" \
 --dataset_split "${DATA_ROOT}/${split_name}_split.npz" \
---save_path "output/nerf_mae/results/${dataset_name}_scratch"
+--save_path "../output/nerf_mae/results/${dataset_name}_scratch"

@@ -19,7 +19,7 @@ python3 -u run_swin_mae3d.py \
 --masking_prob 0.75 \
 --dataset "${dataset_name}" \
 --dataset_split "${DATA_ROOT}/${dataset_name}_split.npz" \
---save_path "/wild6d_data/zubair/nerf_mae/results/front3d_sparse4" \
+--save_path "../otput/nerf_mae/results//nerfmae_all" \
 --gpus 5 \
 --percent_train 1.0 \
---checkpoint /wild6d_data/zubair/nerf_mae/results/front3d_sparse4/epoch_1000.pt
+--checkpoint ../output/nerf_mae/results/nerfmae_all/epoch_1200.pt

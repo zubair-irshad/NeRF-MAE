@@ -30,7 +30,7 @@ python3 -u run_swin_mae3d.py \
 --masking_prob 0.75 \
 --dataset "${dataset_name}" \
 --dataset_split "${DATA_ROOT}/${dataset_name}_split.npz" \
---save_path "output/nerf_mae/results/${dataset_name}_all" \
+--save_path "../output/nerf_mae/results/${dataset_name}_all" \
 --gpus 0 \
 --percent_train 1.0 \
 --tags "${dataset_name}_all" \
