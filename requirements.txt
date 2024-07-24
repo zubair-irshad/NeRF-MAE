@@ -1,0 +1,19 @@
+#torch==1.12.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
+# CUDA 10.2
+#torchvision==0.13.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
+# CUDA 10.2
+numpy<1.24
+imageio
+configargparse
+wandb
+matplotlib
+tqdm
+pandas
+pytransform3d
+kornia
+pandas
+h5py
+opencv-python
+einops
+torchmetrics
+scikit-learn
