@@ -31,8 +31,8 @@ python3 -u run_fcos_pretrained.py \
 --rotated_bbox \
 --log_to_file \
 --nms_thresh 0.3 \
---batch_size 1 \
---gpus 0 \
+--batch_size 8 \
+--gpus 0,1,2 \
 --percent_train 1.0 \
 --normalize_density \
 --tags "${dataset_name}_finetune" \

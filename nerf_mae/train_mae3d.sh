@@ -25,12 +25,12 @@ python3 -u run_swin_mae3d.py \
 --eval_interval 10 \
 --normalize_density \
 --log_to_file \
---batch_size 1 \
+--batch_size 32 \
 --resolution $resolution \
 --masking_prob 0.75 \
 --dataset "${dataset_name}" \
 --dataset_split "${DATA_ROOT}/${dataset_name}_split.npz" \
 --save_path "../output/nerf_mae/results/${dataset_name}_all" \
---gpus 0 \
+--gpus 0,1,2,3,4,5,6,7 \
 --percent_train 1.0 \
 --tags "${dataset_name}_all" \
