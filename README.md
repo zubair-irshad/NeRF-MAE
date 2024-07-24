@@ -80,7 +80,7 @@ If you find this repository or our dataset useful, please star ⭐ this reposito
 @inproceedings{irshad2024nerfmae,
     title={NeRF-MAE: Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural Radiance Fields},
     author={Muhammad Zubair Irshad and Sergey Zakharov and Vitor Guizilini and Adrien Gaidon and Zsolt Kira and Rares Ambrus},
-    journal={European Conference on Computer Vision (ECCV)},
+    booktitle={European Conference on Computer Vision (ECCV)},
     year={2024}
     }
 ```
@@ -140,9 +140,9 @@ NeRF-MAE
 ```
 
 
-Note: The above datasets are all you need to train and evaluate our method. Bonus: we will be releasing our multi-view rendered posed RGB images from FRONT3D, HM3D and Hypersim as well as Instant-NGP trained checkpoints soon (these comprise over 1.6M+ images and 3200+ NeRF checkpoints)
+Note: The above datasets are all you need to train and evaluate our method. Bonus: we will be releasing our multi-view rendered posed RGB images from FRONT3D, HM3D and Hypersim as well as Instant-NGP trained checkpoints soon (these comprise over 1M+ images and 3k+ NeRF checkpoints)
 
-Please note that our dataset was generated using the instruction from [NeRF-RPN]([NeRF-RPN](https://github.com/lyclyc52/NeRF_RPN)) and [3D-CLR](https://vis-www.cs.umass.edu/3d-clr/). Please consider citing our work, NeRF-RPN and 3D-CLR if you find this dataset useful in your research. 
+Please note that our dataset was generated using the instruction from [NeRF-RPN](https://github.com/lyclyc52/NeRF_RPN) and [3D-CLR](https://vis-www.cs.umass.edu/3d-clr/). Please consider citing our work, NeRF-RPN and 3D-CLR if you find this dataset useful in your research. 
 
 Please also note that our dataset uses [Front3D](https://arxiv.org/abs/2011.09127), [Habitat-Matterport3D](https://arxiv.org/abs/2109.08238), [HyperSim](https://github.com/apple/ml-hypersim) and [ScanNet](https://www.scan-net.org/) as the base version of the dataset i.e. we train a NeRF per scene and extract radiance and desnity grid as well as aligned NeRF-grid 3D annotations. Please read the term of use for each dataset if you want to utilize the posed multi-view images for each of these datasets. 
 
@@ -163,7 +163,7 @@ bash train_mae3d.sh
 
 Checkout **train_mae3d.sh** file for a complete list of all hyperparameters such as ```num_epochs```, ```lr```, ```masking_prob``` etc. 
 
-Checkpoints will be saved at a regular interval of 200 epochs, for reproducing the paper results, we utilize the checkpoints at 1200 epochs.
+Checkpoints will be saved at a regular interval of 200 epochs. For reproducing the paper results, we utilize the checkpoints at 1200 epochs.
 
 
 **Notes**: 
@@ -182,26 +182,26 @@ Our finetuning code is largely based on [NeRF-RPN](https://github.com/lyclyc52/N
 ### 3D Object Detection
 Navigate to **nerf-rpn** folder and run finetuning script. 
 
-To run finetuning with our pretrained weights:
+To run 3D Swin Transformer + FPN model finetuning with our pretrained weights:
 
 ```
 cd nerf-rpn
 bash train_fcos_pretrained.sh
 ```
 
-To run finetuning with starting from scratch weights:
+To train the 3D Swin Transformer + FPN model model with weights started from scratch:
 
 ```
 cd nerf-rpn
 bash train_fcos.sh
 ```
 
-For evaluating our pretrained weights or finetuning from scratch, use ```bash test_fcos_pretrained.sh``` or ```bash test_fcos.sh```
+**Note**: only 3D Swin Transformer weights are started from our pretraining. FPN weights for both cases are started from scratch. For evaluating our pretrained weights or finetuning from scratch, use ```bash test_fcos_pretrained.sh``` or ```bash test_fcos.sh```
 
-Checkout **train_fcos_pretraining.sh** and ```test_fcos_pretrained.sh``` file for a complete list of all hyperparameters such as ```mae_checkpoint```, ```num_epochs```, ```lr```, ```masking_prob``` etc. Code for finetuning and eval for our downstream tasks are based on [NeRF-RPN's](https://github.com/lyclyc52/NeRF_RPN) implementation.
+Checkout **train_fcos_pretraining.sh** and ***test_fcos_pretrained.sh*** file for a complete list of all hyperparameters such as ```mae_checkpoint```, ```num_epochs```, ```lr```, ```masking_prob``` etc. Code for finetuning and eval for our downstream tasks are based on [NeRF-RPN's](https://github.com/lyclyc52/NeRF_RPN) implementation.
 
 ## Acknowledgments
-This code is built upon the implementation from [NeRF-RPN](https://github.com/lyclyc52/NeRF_RPN).
+This code is built upon the implementation from [NeRF-RPN](https://github.com/lyclyc52/NeRF_RPN). We appreciate the authors for releasing their open-source implementation. 
 
 ## Licenses
 This repository and dataset is released under the [CC BY-NC 4.0](https://github.com/zubair-irshad/NeO-360/blob/master/LICENSE.md) license.
