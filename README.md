@@ -54,12 +54,11 @@ This repository is the pytorch implementation of our **ECCV 2024** paper, **NeRF
 
 ## 🏷️ TODO 
 
-- [x] Release large-scale pretraining code
-- [x] Release NeRF-MAE dataset comprising radiance and density grids
-- [x] Release 3D object detection finetuning and eval code
+- [x] Release large-scale pretraining code 🚀
+- [x] Release NeRF-MAE dataset comprising radiance and density grids 🚀
+- [x] Release 3D object detection finetuning and eval code 🚀
 - [ ] Pretrained NeRF-MAE checkpoints and out-of-the-box model usage
 - [ ] Release multi-view rendered images and Instant-NGP checkpoints (totalling 1.6M+ posed images and 3200+ trained NeRF checkpoints)
-- [ ] 3D semantic labelling and voxel-super resolution finetuning and evaluation code
 
 ## NeRF-MAE Model Architecture
 <p align="center">

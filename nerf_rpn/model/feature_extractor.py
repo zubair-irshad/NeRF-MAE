@@ -1155,14 +1155,6 @@ class SwinTransformer_FPN_Pretrained_Skip(nn.Module):  # TODO: change to 3D
             checkpoint = torch.load(checkpoint_path, map_location="cpu")
             model.load_state_dict(checkpoint["state_dict"])
 
-        # Remove the decoder_layers from the pretrained model
-        # del model.decoder_layers
-        # del model.mask_token
-
-        # del model.encoder2
-        # del model.encoder3
-        # del model.encoder4
-        # del model.encoder5
         del model.decoder4
         del model.decoder3
         del model.decoder2
