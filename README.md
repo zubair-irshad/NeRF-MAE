@@ -1,8 +1,8 @@
 <!-- # NeRF-MAE: Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural Radiance Fields -->
 
 <div align="center">
-    <img src="demo/nerf-mae_teaser.png" alt="Voltron Logo"/>
-    <img src="demo/nerf-mae_teaser.jpeg" width="100%">
+    <img src="demo/nerf-mae_teaser.png" width="85%">
+    <img src="demo/nerf-mae_teaser.jpeg" width="85%">
 </div>
 <!-- <p align="center">
 <img src="demo/nerf-mae_teaser.jpeg" width="100%">
