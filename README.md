@@ -16,6 +16,11 @@
 [![Pytorch](https://img.shields.io/badge/Pytorch-%3E1.12-gray?style=for-the-badge&logo=pytorch&logoColor=white&labelColor=gray&color=ee4c2c&link=https%3A%2F%2Fnerf-mae.github.io%2F)](https://pytorch.org/)
 [![Cite](https://img.shields.io/badge/Cite-Bibtex-gray?style=for-the-badge&logoColor=white&color=F7A41D
 )](https://github.com/zubair-irshad/NeRF-MAE?tab=readme-ov-file#citation)
+[![Video](https://img.shields.io/badge/youtube-video-CD201F?style=for-the-badge&logo=youtube&labelColor=grey
+)](https://youtu.be/D60hlhmeuJI?si=d4RfHAwBJgLJXdKj)
+
+
+
 </div>
 
 ---
@@ -32,7 +37,7 @@
 
 
 
-**NeRF-MAE : Masked AutoEncoders for Self Supervised 3D representation Learning for Neural Radiance Fields**
+**NeRF-MAE : Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural Radiance Fields**
 
 <a href="https://zubairirshad.com"><strong>Muhammad Zubair Irshad</strong></a>
 ·
