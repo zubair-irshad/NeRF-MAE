@@ -58,12 +58,12 @@
 - **NeRF-MAE**: The first large-scale pretraining utilizing Neural Radiance Fields (NeRF) as an input modality. We pretrain a single Transformer model on thousands of NeRFs for 3D representation learning.
 - **NeRF-MAE Dataset**: A large-scale NeRF pretraining and downstream task finetuning dataset.
 
-## 🏷️ TODO 
+## 🏷️ TODO 🚀
 
 - [x] Release large-scale pretraining code 🚀
 - [x] Release NeRF-MAE dataset comprising radiance and density grids 🚀
 - [x] Release 3D object detection finetuning and eval code 🚀
-- [x] Pretrained NeRF-MAE checkpoints and out-of-the-box model usage
+- [x] Pretrained NeRF-MAE checkpoints and out-of-the-box model usage 🚀
 
 ## NeRF-MAE Model Architecture
 <p align="center">
