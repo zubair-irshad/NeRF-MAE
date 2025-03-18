@@ -218,7 +218,7 @@ class ROIPool(nn.Module):
             original_size(List(List))(Optional): original size of the feature maps. Only used when reamp is enabled.
         '''
 
-        # If remap is True, it will run FPN verison of mapping.
+        # If remap is True, it will run FPN version of mapping.
         if self.remap:
             if original_size is None:
                 for f in feature:
