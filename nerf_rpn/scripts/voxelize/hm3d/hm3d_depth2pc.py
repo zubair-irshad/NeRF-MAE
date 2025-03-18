@@ -227,7 +227,7 @@ def depth2pc(depth_dir, mask_dir, scene_dir, points_per_obj=100000):
         # mask_img = np.array(mask_img["class_segmaps"][:])
 
         # mapping_file = (
-        #     "/home/zubairirshad/NeRF_MAE_internal/nerf_rpn/scripts/voxelize/3D_front_mapping.csv"
+        #     "NeRF_MAE_internal/nerf_rpn/scripts/voxelize/3D_front_mapping.csv"
         # )
         # mask_img = modify_mask_img(
         #     mask_img, mapping_file=mapping_file, category_mapping=category_mapping
@@ -301,7 +301,7 @@ def write_npz(pcd, path):
 
 
 if __name__ == "__main__":
-    # dir = '/home/zubairirshad/Downloads/FRONT3D_render_seg_2'
+    # dir = 'Downloads/FRONT3D_render_seg_2'
     dir = "/home/mirshad7/Downloads/hm3d_sem_depth"
     scenes = os.listdir("/home/mirshad7/Downloads/masked_rdp_2_transforms")
     all_depth_folders = os.listdir(dir)

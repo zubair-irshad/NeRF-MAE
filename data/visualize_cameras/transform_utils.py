@@ -3,7 +3,7 @@ import numpy as np
 import json
 import numpy as np
 import sys
-sys.path.append('/home/zubairirshad/nerf_pl')
+sys.path.append('nerf_pl')
 from visualize_nerf.utils import repeat_interleave
 
 

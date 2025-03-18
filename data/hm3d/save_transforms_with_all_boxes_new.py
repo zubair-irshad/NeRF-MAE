@@ -34,14 +34,14 @@ excluded_labels_nyu40 = [
     'otherstructure'
 ]
 
-local_folder = "/home/zubairirshad"
-remote_folder = "/home/mirshad7"
+local_folder = "/home"
+remote_folder = "/home"
 
 # remote_folder = local_folder
 
-# hm3d_to_mp3d_path = "/home/zubairirshad/NeRF_MAE_internal/data/hm3d/matterport_category_mappings.tsv"
+# hm3d_to_mp3d_path = "NeRF_MAE_internal/data/hm3d/matterport_category_mappings.tsv"
 hm3d_to_mp3d_path = os.path.join(remote_folder, "NeRF_MAE/data/hm3d/matterport_category_mappings.tsv")
-# hm3d_to_mp3d_path = "/home/zubairirshad/NeRF_MAE_internal/data/hm3d/matterport_category_mappings.tsv"
+# hm3d_to_mp3d_path = "NeRF_MAE_internal/data/hm3d/matterport_category_mappings.tsv"
 
 df = pd.read_csv(hm3d_to_mp3d_path, sep="    ", header=0, engine="python")
 hm3d_to_nyu40 = {row["category"]: row["nyu40id"] for _, row in df.iterrows()}
@@ -291,13 +291,13 @@ def transform_poses_pca(poses: np.ndarray):
 
 #raw data dir
 # dir = "/home/mirshad7/Downloads/hm3d_raw"
-# dir = "/home/zubairirshad/Downloads/hm3d_raw"
+# dir = "Downloads/hm3d_raw"
 
 dir = os.path.join(remote_folder, "Downloads/hm3d_raw")
 folders = os.listdir(dir)
 
 # out_dir = "/home/mirshad7/Downloads/hm3d_transforms_with_boxes"
-# out_dir = "/home/zubairirshad/Downloads/hm3d_transforms_with_boxes"
+# out_dir = "Downloads/hm3d_transforms_with_boxes"
 
 # out_dir = os.path.join(remote_folder, "Downloads/hm3d_transforms_with_allboxes")
 out_dir = os.path.join(remote_folder, "Downloads/hm3d_transforms_with_allboxes_new")
@@ -307,7 +307,7 @@ os.makedirs(out_dir, exist_ok=True)
 print("total folders", len(folders))
 
 # obj_obb_folder_path = '/home/mirshad7/Downloads/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis'
-# obj_obb_folder_path = '/home/zubairirshad/Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis'
+# obj_obb_folder_path = 'Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis'
 
 obj_obb_folder_path = os.path.join(remote_folder, "Downloads/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis")
 # obj_obb_folder_path = os.path.join(remote_folder, "Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis")
@@ -318,7 +318,7 @@ for folder in folders:
 
     out_transforms_folder = os.path.join(out_dir, folder, "train")
     os.makedirs(out_transforms_folder, exist_ok=True)
-    # input_folder = '/home/zubairirshad/Downloads/masked_rdp_2/00891-cvZr5TUy5C5_6'
+    # input_folder = 'Downloads/masked_rdp_2/00891-cvZr5TUy5C5_6'
 
     output_folder = os.path.join(input_folder, "train", "images")
     pose_folder = os.path.join(
@@ -336,7 +336,7 @@ for folder in folders:
     focal_length_x = 256.0 / np.tan(np.deg2rad(90.0) / 2)
     camera_angle_x = 2 * np.arctan(width / (2 * focal_length_x))
 
-    # bbox_file_path = "/home/zubairirshad/Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
+    # bbox_file_path = "Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
 
     bbox_file_path = os.path.join(obj_obb_folder_path, folder + '.json')
     # excluded_classes = []

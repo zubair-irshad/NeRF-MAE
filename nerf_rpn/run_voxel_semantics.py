@@ -423,10 +423,10 @@ class Trainer:
         # load class weights from text file
 
         if self.args.dataset == "hm3d":
-            class_weights_file = "/home/ubuntu/zubair/NeRF_MAE/nerf_rpn/class_weights_hm3d.txt"
+            class_weights_file = "NeRF_MAE/nerf_rpn/class_weights_hm3d.txt"
             out_channels = 21
         else:
-            class_weights_file = "/home/ubuntu/zubair/NeRF_MAE/nerf_rpn/class_weights.txt"
+            class_weights_file = "NeRF_MAE/nerf_rpn/class_weights.txt"
             out_channels = 19
         class_weights = np.loadtxt(class_weights_file)
         class_weights = torch.FloatTensor(class_weights)

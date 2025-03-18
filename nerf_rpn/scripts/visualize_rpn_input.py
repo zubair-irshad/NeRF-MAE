@@ -9,7 +9,7 @@ import open3d as o3d
 import torch
 import sys
 
-sys.path.append("/home/zubairirshad/NeRF_MAE_internal/nerf_mae")
+sys.path.append("NeRF_MAE_internal/nerf_mae")
 
 from model.mae.viz_utils import *
 

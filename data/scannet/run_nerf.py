@@ -30,7 +30,7 @@ from tqdm import tqdm, trange
 
 import sys
 
-sys.path.append("/home/ubuntu/zubair/dense_depth_priors_nerf")
+sys.path.append("dense_depth_priors_nerf")
 
 from model import (
     NeRF,

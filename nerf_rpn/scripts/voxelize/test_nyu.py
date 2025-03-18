@@ -2,7 +2,7 @@ import csv
 
 # Load data from CSV
 data = {}
-with open('/home/zubairirshad/BlenderProc/blenderproc/resources/front_3D/3D_front_nyu_mapping.csv', 'r') as csvfile:
+with open('BlenderProc/blenderproc/resources/front_3D/3D_front_nyu_mapping.csv', 'r') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         id_number = int(row['id'])

@@ -66,7 +66,7 @@ print("total folders", len(folders))
 count = 0
 for folder in folders:
     input_folder = os.path.join(dir, folder)
-    # input_folder = '/home/zubairirshad/Downloads/masked_rdp_2/00891-cvZr5TUy5C5_6'
+    # input_folder = 'Downloads/masked_rdp_2/00891-cvZr5TUy5C5_6'
 
     output_folder = os.path.join(input_folder, "train", "images")
     pose_folder = os.path.join(
@@ -84,7 +84,7 @@ for folder in folders:
     focal_length_x = 256.0 / np.tan(np.deg2rad(90.0) / 2)
     camera_angle_x = 2 * np.arctan(width / (2 * focal_length_x))
 
-    # bbox_file_path = "/home/zubairirshad/Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
+    # bbox_file_path = "Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
 
     # excluded_classes = []
     # # Load the JSON data from the bounding box file

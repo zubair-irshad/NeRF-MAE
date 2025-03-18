@@ -3,9 +3,10 @@
 set -x
 set -e
 
-dataset_name="nerfmae"
+dataset_name="front3d"
+split_name="3dfront"
 
-DATA_ROOT="../dataset/pretrain"
+DATA_ROOT="NeRF-MAE/dataset/${dataset_name}_rpn_data"
 
 
 python3 -u run_swin_mae3d.py \
@@ -18,8 +19,8 @@ python3 -u run_swin_mae3d.py \
 --resolution 160 \
 --masking_prob 0.75 \
 --dataset "${dataset_name}" \
---dataset_split "${DATA_ROOT}/${dataset_name}_split.npz" \
+--dataset_split "${DATA_ROOT}/${split_name}_split.npz" \
 --save_path "../otput/nerf_mae/results//nerfmae_all" \
 --gpus 0 \
 --percent_train 1.0 \
---checkpoint ../output/nerf_mae/results/nerfmae_all/epoch_1200.pt
+--checkpoint NeRF-MAE/checkpoints/mae_pretrained/nerf_mae_pretrained.pt

@@ -11,8 +11,8 @@ python3 -u run_rpn.py \
 --features_path ${DATA_ROOT}/features \
 --boxes_path ${DATA_ROOT}/obb \
 --dataset_split ${DATA_ROOT}/3dfront_split.npz \
---save_path /wild6d_data/zubair/nerf_mae/results/front3d_anchor_swins \
---checkpoint /wild6d_data/zubair/nerf_mae/results/front3d_anchor_swins/model_best.pt \
+--save_path nerf_mae/results/front3d_anchor_swins \
+--checkpoint nerf_mae/results/front3d_anchor_swins/model_best.pt \
 --rpn_nms_thresh 0.3 \
 --normalize_density \
 --rotated_bbox \

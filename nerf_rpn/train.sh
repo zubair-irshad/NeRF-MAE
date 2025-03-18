@@ -13,7 +13,7 @@ python3 -u run_rpn.py \
 --features_path ${DATA_ROOT}/features \
 --boxes_path ${DATA_ROOT}/obb \
 --dataset_split ${DATA_ROOT}/3dfront_split.npz \
---save_path /wild6d_data/zubair/nerf_mae/results/front3d_anchor_swins \
+--save_path nerf_mae/results/front3d_anchor_swins \
 --num_epochs 200 \
 --lr 3e-4 \
 --weight_decay 1e-3 \

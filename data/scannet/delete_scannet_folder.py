@@ -1,7 +1,7 @@
 import os
 import shutil
 
-folder_path = "/home/ubuntu/zubair/NeRF_MAE/data/scannet/scannet_processed/scans_test"
+folder_path = "NeRF_MAE/data/scannet/scannet_processed/scans_test"
 
 # Iterate through all files in the folder
 for filename in os.listdir(folder_path):

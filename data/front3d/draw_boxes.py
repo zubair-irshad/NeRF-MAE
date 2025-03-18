@@ -34,7 +34,7 @@ import json
 
 folder_name = '3dfront_0040_00'
 
-folder = '/home/zubairirshad/Downloads/front3d_nerf_data'
+folder = 'front3d_nerf_data'
 
 transforms_folder = os.path.join(folder, folder_name)
 new_json_path = os.path.join(transforms_folder, "train", "transforms.json")

@@ -183,7 +183,7 @@ def depth2pc(depth_dir, mask_dir, scene_dir, points_per_obj=100000):
         mask_img = np.array(mask_img["class_segmaps"][:])
 
         mapping_file = (
-            "/home/zubairirshad/NeRF_MAE_internal/nerf_rpn/scripts/voxelize/3D_front_mapping.csv"
+            "NeRF_MAE_internal/nerf_rpn/scripts/voxelize/3D_front_mapping.csv"
         )
         mask_img = modify_mask_img(
             mask_img, mapping_file=mapping_file, category_mapping=category_mapping
@@ -255,9 +255,9 @@ def write_npz(pcd, path):
 
 
 if __name__ == "__main__":
-    # dir = '/home/zubairirshad/Downloads/FRONT3D_render_seg_2'
-    dir = "/home/zubairirshad/Downloads/FRONT3D_render_seg_all"
-    scenes = os.listdir("/home/zubairirshad/Downloads/front3d_nerf_data")
+    # dir = 'Downloads/FRONT3D_render_seg_2'
+    dir = "Downloads/FRONT3D_render_seg_all"
+    scenes = os.listdir("Downloads/front3d_nerf_data")
     all_depth_folders = os.listdir(dir)
     for s in tqdm(scenes):
         if s not in all_depth_folders:
@@ -270,7 +270,7 @@ if __name__ == "__main__":
         pcd = depth2pc(
             os.path.join(depth_dir),
             os.path.join(mask_dir),
-            os.path.join("/home/zubairirshad/Downloads/front3d_nerf_data", s),
+            os.path.join("Downloads/front3d_nerf_data", s),
         )
         write_npz(pcd, os.path.join(out_dir, s + ".npz"))
         write_ply(pcd, os.path.join(out_dir, s + ".ply"))

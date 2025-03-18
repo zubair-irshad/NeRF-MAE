@@ -30,7 +30,7 @@ import numpy as np
 # }
 import os
 import json
-transforms_folder = '/home/zubairirshad/Downloads/hypersim_nerf_data_test/ai_001_001'
+transforms_folder = 'Downloads/hypersim_nerf_data_test/ai_001_001'
 new_json_path = os.path.join(transforms_folder, "train", "transforms.json")
 with open(new_json_path, "r") as new_json_file:
     transforms_json = json.load(new_json_file)

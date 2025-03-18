@@ -37,7 +37,7 @@ import numpy as np
 
 # Define the paths to your JSON files
 
-transforms_file_path = "/home/zubairirshad/Downloads/masked_rdp_2/00891-cvZr5TUy5C5_6/transforms.json"
+transforms_file_path = "Downloads/masked_rdp_2/00891-cvZr5TUy5C5_6/transforms.json"
 
 
 
@@ -47,7 +47,7 @@ with open(transforms_file_path, 'r') as transforms_file:
 
 # Extract the bounding boxes
 
-bbox_file_path = "/home/zubairirshad/Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
+bbox_file_path = "Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
 
 # Load the JSON data from the bounding box file
 with open(bbox_file_path, 'r') as bbox_file:

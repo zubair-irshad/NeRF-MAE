@@ -39,4 +39,4 @@ python3 -u run_fcos_pretrained.py \
 --dataset "${dataset_name}" \
 --dataset_split "${DATA_ROOT}/${split_name}_split.npz" \
 --save_path "../output/nerf_rpn/results/nerfmae_all" \
---mae_checkpoint "../output/nerf_mae/results/nerfmae_all/epoch_20.pt"
+--mae_checkpoint "NeRF-MAE/checkpoints/nerf_mae_pretrained.pt"

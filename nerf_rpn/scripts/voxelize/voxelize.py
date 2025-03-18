@@ -72,7 +72,7 @@ def voxelize(points, ids, room_bbox, width, length, height):
 
 
 if __name__ == "__main__":
-    dir = "/home/zubairirshad/Downloads/FRONT3D_render_seg_all"
+    dir = "Downloads/FRONT3D_render_seg_all"
 
     scenes = os.listdir(dir)
 
@@ -80,8 +80,8 @@ if __name__ == "__main__":
         if s == "00179-MVVzj944atG_3":
             continue
         pcd_dir = os.path.join(dir, s, "pcd")
-        feat_dir = "/home/zubairirshad/Downloads/front3d_rpn_data/features"
-        xform_dir = "/home/zubairirshad/Downloads/front3d_nerf_data"
+        feat_dir = "Downloads/front3d_rpn_data/features"
+        xform_dir = "Downloads/front3d_nerf_data"
         out_dir = os.path.join(dir, s, "voxel")
         os.makedirs(out_dir, exist_ok=True)
 

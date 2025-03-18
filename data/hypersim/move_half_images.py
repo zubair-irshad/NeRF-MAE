@@ -6,7 +6,7 @@ import numpy as np
 
 # Input and output directory paths
 
-folder = "/wild6d_data/zubair/nerf_rpn/hypersim_raw_random_20"
+folder = "nerf_rpn/hypersim_raw_random_20"
 downsample_num = 1
 all_dirs = os.listdir(folder)
 
@@ -18,8 +18,8 @@ for num_dir, dir in enumerate(all_dirs):
     #     continue
     input_dir = os.path.join(folder, dir)
 
-    # input_dir = "/home/zubairirshad/Downloads/single_scene_front3d/3dfront_2001_00/train"
-    # output_dir = "/home/zubairirshad/Downloads/single_scene_front3d_downsample"
+    # input_dir = "Downloads/single_scene_front3d/3dfront_2001_00/train"
+    # output_dir = "Downloads/single_scene_front3d_downsample"
 
     # Create the output directory if it doesn't exist
     # os.makedirs(output_dir, exist_ok=True)

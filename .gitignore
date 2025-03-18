@@ -1,0 +1,10 @@
+checkpoints/
+dataset/
+nerf_rpn/output/
+# Ignore all __pycache__ directories
+**/__pycache__/
+
+# Ignore all .pyc, .pyo, .pyd files
+**/*.pyc
+**/*.pyo
+**/*.pyd

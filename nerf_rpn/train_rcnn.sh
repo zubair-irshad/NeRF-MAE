@@ -9,9 +9,9 @@ python3 -u run_rpn_detect.py \
 --features_path ${DATA_ROOT}/features \
 --boxes_path ${DATA_ROOT}/obb \
 --dataset_split ${DATA_ROOT}/hypersim_split_new.npz \
---rois_path /wild6d_data/zubair/nerf_mae/results/hypersim_anchor_swinS/proposals \
---pretrained /wild6d_data/zubair/nerf_mae/results/hypersim_anchor_swinS/model_best.pt \
---save_root /wild6d_data/zubair/nerf_mae/results/objectness_model \
+--rois_path nerf_mae/results/hypersim_anchor_swinS/proposals \
+--pretrained nerf_mae/results/hypersim_anchor_swinS/model_best.pt \
+--save_root nerf_mae/results/objectness_model \
 --fine_tune \
 --backbone_type swin \
 --num_epochs 1000 \

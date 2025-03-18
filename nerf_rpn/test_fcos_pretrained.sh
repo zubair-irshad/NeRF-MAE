@@ -4,10 +4,10 @@ set -x
 set -e
 
 resolution=160
-dataset_name="front3d"
-split_name="3dfront"
+dataset_name="3dfront"
+split_name="front3d"
 
-DATA_ROOT="/wild6d_data/zubair/nerf_rpn/${dataset_name}_rpn_data"
+DATA_ROOT="NeRF-MAE/dataset/${dataset_name}_rpn_data"
 
 python3 -u run_fcos_pretrained.py \
 --mode eval \
@@ -23,8 +23,8 @@ python3 -u run_fcos_pretrained.py \
 --save_level_index \
 --nms_thresh 0.3 \
 --batch_size 2 \
---gpus 7 \
+--gpus 0 \
 --dataset "${dataset_name}" \
 --dataset_split "${DATA_ROOT}/${split_name}_split.npz" \
 --save_path "output/nerf_mae/results/${dataset_name}_finetune" \
---checkpoint "output/nerf_mae/results/${dataset_name}_finetune/model_best_ap50_ap25_0.6498397588729858_0.8356480598449707.pt" \
+--checkpoint "NeRF-MAE/checkpoints/front3d_obb_finetuned.pt" \

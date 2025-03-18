@@ -3,9 +3,6 @@
 # import numpy as np
 # from skimage.metrics import peak_signal_noise_ratio, structural_similarity as ssim
 
-# val_folder_dir = '/data/zubair/front3d_nerf_data_sparse1'
-
-# train_folder_dir = '/data/zubair/FRONT3D_render_sparse1'
 # all_folders = os.listdir(val_folder_dir)
 
 # overall_psnr = []
@@ -57,8 +54,8 @@ import numpy as np
 from skimage.metrics import peak_signal_noise_ratio, structural_similarity as ssim
 from concurrent.futures import ProcessPoolExecutor
 
-val_folder_dir = "/data/zubair/front3d_nerf_data_sparse3"
-train_folder_dir = "/data/zubair/FRONT3D_render_sparse3"
+val_folder_dir = "front3d_nerf_data_sparse3"
+train_folder_dir = "FRONT3D_render_sparse3"
 all_folders = os.listdir(val_folder_dir)
 
 overall_psnr = []

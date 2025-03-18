@@ -6,7 +6,7 @@ import numpy as np
 
 # Input and output directory paths
 
-folder = "/arkit_data/zubair/front3d_nerf_160_sparse1"
+folder = "front3d_nerf_160_sparse1"
 downsample_num = 10
 all_dirs = os.listdir(folder)
 
@@ -17,9 +17,6 @@ for num_dir, dir in enumerate(all_dirs):
     # if dir == "3dfront_2000_00":
     #     continue
     input_dir = os.path.join(folder, dir)
-
-    # input_dir = "/home/zubairirshad/Downloads/single_scene_front3d/3dfront_2001_00/train"
-    # output_dir = "/home/zubairirshad/Downloads/single_scene_front3d_downsample"
 
     # Create the output directory if it doesn't exist
     # os.makedirs(output_dir, exist_ok=True)

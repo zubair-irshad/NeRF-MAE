@@ -2,11 +2,11 @@ import numpy as np
 import os
 import open3d as o3d
 import sys
-sys.path.append("/home/zubairirshad/NeRF_MAE_internal/nerf_mae")
+sys.path.append("NeRF_MAE_internal/nerf_mae")
 from model.mae.viz_utils import *
 from model.mae.torch_utils import *
 
-voxel_folder = '/home/zubairirshad/Downloads/FRONT3D_render_seg/voxel'
+voxel_folder = 'Downloads/FRONT3D_render_seg/voxel'
 voxel_files = os.listdir(voxel_folder)
 
 

@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import os
 import sys
 
-sys.path.append("/home/zubairirshad/NeRF_MAE_internal/nerf_mae")
+sys.path.append("NeRF_MAE_internal/nerf_mae")
 from model.mae.torch_utils import *
 from model.mae.viz_utils import *
 
@@ -58,7 +58,7 @@ def unpatchify_3d_full(x, patch_size=None, resolution=None, channel_dims=3):
 
 if __name__ == "__main__":
     dataset = "front3d"
-    folder_name = "/home/zubairirshad/Downloads/hm3d_rpn_data"
+    folder_name = "Downloads/hm3d_rpn_data"
     filename = "00009-vLpv2VX547B_0"
     hypersim = False
     resolution = 160

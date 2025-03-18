@@ -1,3 +1,0 @@
-# ninja log v5
-1	9471	1715392152705251830	/home/zubairirshad/NeRF_MAE_internal/nerf_rpn/model/rotated_iou/cuda_op/build/temp.linux-x86_64-cpython-39/sort_vert_kernel.o	c556d8dbcdddf6da
-0	11031	1715392154261222638	/home/zubairirshad/NeRF_MAE_internal/nerf_rpn/model/rotated_iou/cuda_op/build/temp.linux-x86_64-cpython-39/sort_vert.o	8fdb1b9664b77a3a

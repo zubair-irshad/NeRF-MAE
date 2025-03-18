@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import pytransform3d.visualizer as pv
 
 # import sys
-# sys.path.append('/home/zubairirshad/NeRF_MAE_internal')
+# sys.path.append('NeRF_MAE_internal')
 from transform_utils import *
 import pandas as pd
 import h5py
@@ -45,7 +45,7 @@ excluded_labels_nyu40 = [
     # 'lamp'
 ]
 
-hm3d_to_mp3d_path = "/home/zubairirshad/NeRF_MAE_internal/data/hm3d/matterport_category_mappings.tsv"
+hm3d_to_mp3d_path = "NeRF_MAE_internal/data/hm3d/matterport_category_mappings.tsv"
 df = pd.read_csv(hm3d_to_mp3d_path, sep="    ", header=0, engine="python")
 hm3d_to_nyu40 = {row["category"]: row["nyu40id"] for _, row in df.iterrows()}
 nyu40_id_label = {1: 'wall', 8: 'door', 22: 'ceiling', 2: 'floor', 11: 'picture', 9: 'window', 5: 'chair', 0: 'void', 18: 'pillow', 40: 'otherprop', 35: 'lamp', 3: 'cabinet', 16: 'curtain', 7: 'table', 19: 'mirror', 27: 'towel', 34: 'sink', 15: 'shelves', 6: 'sofa', 4: 'bed', 32: 'night stand', 33: 'toilet', 38: 'otherstructure', 25: 'television', 14: 'desk', 29: 'box', 39: 'otherfurniture', 12: 'counter', 21: 'clothes', 36: 'bathtub', 23: 'books', 17: 'dresser', 24: 'refridgerator', 10: 'bookshelf', 28: 'shower curtain', 13: 'blinds', 20: 'floor mat', 37: 'bag', 30: 'whiteboard', 26: 'paper', 31: 'person'}
@@ -706,13 +706,13 @@ def get_boxes(box_file_path, filter_by_size=True, min_size=6.5, grid_res=160):
 if __name__ == '__main__':
     import os
     import glob
-    # base_path = '/home/zubairirshad/Downloads/ai_002_005'
+    # base_path = 'Downloads/ai_002_005'
 
     instance_name = '00891-cvZr5TUy5C5_6'
-    # pose_folder = os.path.join('/home/zubairirshad/Downloads/masked_rdp_2', instance_name)
+    # pose_folder = os.path.join('Downloads/masked_rdp_2', instance_name)
 
-    pose_folder = os.path.join('/home/zubairirshad/Downloads/hm3d_raw', instance_name)
-    # pose_folder = '/home/zubairirshad/Downloads/masked_rdp_2/00891-cvZr5TUy5C5_6'
+    pose_folder = os.path.join('Downloads/hm3d_raw', instance_name)
+    # pose_folder = 'Downloads/masked_rdp_2/00891-cvZr5TUy5C5_6'
 
     all_poses = []
     pose_path = os.path.join(pose_folder, 'train', 'transforms.json')
@@ -775,8 +775,8 @@ if __name__ == '__main__':
     # bounding_boxes = (extents, orientation, pos)
     
 
-    box_file_path = os.path.join('/home/zubairirshad/Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis', instance_name + '.json')
-    # bbox_file_path = "/home/zubairirshad/Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
+    box_file_path = os.path.join('Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis', instance_name + '.json')
+    # bbox_file_path = "Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
 
 
     extents, rotations, translations = get_boxes(box_file_path)

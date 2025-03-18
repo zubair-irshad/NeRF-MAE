@@ -30,7 +30,7 @@ import numpy as np
 # }
 import os
 import json
-transforms_folder = '/home/zubairirshad/Downloads/hm3d_transforms_with_allboxes_translate/00009-vLpv2VX547B_0'
+transforms_folder = 'Downloads/hm3d_transforms_with_allboxes_translate/00009-vLpv2VX547B_0'
 new_json_path = os.path.join(transforms_folder, "train", "transforms.json")
 with open(new_json_path, "r") as new_json_file:
     transforms_json = json.load(new_json_file)

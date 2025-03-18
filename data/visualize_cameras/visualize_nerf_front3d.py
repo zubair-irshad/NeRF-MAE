@@ -378,19 +378,19 @@ if __name__ == '__main__':
     import os
 
     base_dir = './'
-    folder = '/home/zubairirshad/Downloads/FRONT3D_render/'
+    folder = 'Downloads/FRONT3D_render/'
     folder_name = '3dfront_2002_02'
 
-    # folder = "/home/zubairirshad/ARKitScenes/data/raw/Training/40776204/train"
+    # folder = "ARKitScenes/data/raw/Training/40776204/train"
     #train_cam_dict = json.load(open(os.path.join(folder, folder_name, 'train/transforms.json')))
 
-    # folder = "/home/zubairirshad/Downloads/record3d_2/EXR_RGBD/train"
-    # folder = '/home/zubairirshad/instant-ngp'
+    # folder = "Downloads/record3d_2/EXR_RGBD/train"
+    # folder = 'instant-ngp'
     train_cam_dict = json.load(open(os.path.join(folder, folder_name,'train/transforms.json')))
 
     sphere_radius = 1.
     # train_cam_dict = json.load(open(''))
-    #test_cam_dict = json.load(open('/home/zubairirshad/mvsnerf/data/nerf_synthetic/nerf_synthetic/hotdog/transforms_test.json'))
+    #test_cam_dict = json.load(open('mvsnerf/data/nerf_synthetic/nerf_synthetic/hotdog/transforms_test.json'))
     # path_cam_dict = json.load(open(os.path.join(base_dir, 'camera_path/cam_dict_norm.json')))
     camera_size = 0.1
 

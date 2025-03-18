@@ -4,7 +4,7 @@ import os
 import argparse
 import sys
 
-sys.path.append("/home/zubairirshad/NeRF_MAE_internal")
+sys.path.append("NeRF_MAE_internal")
 from einops import rearrange
 
 from nerf_rpn.model.feature_extractor import (
@@ -333,7 +333,7 @@ def unpatchify_3d_full(x, patch_size=None, resolution=None, channel_dims=4):
 
 
 def load_data(folder_name, filename, resolution, normalize_density=True):
-    # folder_name = "/home/zubairirshad/Downloads/hypersim_rpn_data/vis_scenes"
+    # folder_name = "Downloads/hypersim_rpn_data/vis_scenes"
     # filename = "ai_006_007"
 
     # resolution = 160

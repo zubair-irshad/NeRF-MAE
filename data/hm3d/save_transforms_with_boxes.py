@@ -34,7 +34,7 @@ excluded_labels_nyu40 = [
     # 'lamp'
 ]
 
-hm3d_to_mp3d_path = "/home/zubairirshad/NeRF_MAE_internal/data/hm3d/matterport_category_mappings.tsv"
+hm3d_to_mp3d_path = "NeRF_MAE_internal/data/hm3d/matterport_category_mappings.tsv"
 df = pd.read_csv(hm3d_to_mp3d_path, sep="    ", header=0, engine="python")
 hm3d_to_nyu40 = {row["category"]: row["nyu40id"] for _, row in df.iterrows()}
 nyu40_id_label = {1: 'wall', 8: 'door', 22: 'ceiling', 2: 'floor', 11: 'picture', 9: 'window', 5: 'chair', 0: 'void', 18: 'pillow', 40: 'otherprop', 35: 'lamp', 3: 'cabinet', 16: 'curtain', 7: 'table', 19: 'mirror', 27: 'towel', 34: 'sink', 15: 'shelves', 6: 'sofa', 4: 'bed', 32: 'night stand', 33: 'toilet', 38: 'otherstructure', 25: 'television', 14: 'desk', 29: 'box', 39: 'otherfurniture', 12: 'counter', 21: 'clothes', 36: 'bathtub', 23: 'books', 17: 'dresser', 24: 'refridgerator', 10: 'bookshelf', 28: 'shower curtain', 13: 'blinds', 20: 'floor mat', 37: 'bag', 30: 'whiteboard', 26: 'paper', 31: 'person'}
@@ -186,7 +186,7 @@ for folder in folders:
 
     out_transforms_folder = os.path.join(out_dir, folder, "train")
     os.makedirs(out_transforms_folder, exist_ok=True)
-    # input_folder = '/home/zubairirshad/Downloads/masked_rdp_2/00891-cvZr5TUy5C5_6'
+    # input_folder = 'Downloads/masked_rdp_2/00891-cvZr5TUy5C5_6'
 
     output_folder = os.path.join(input_folder, "train", "images")
     pose_folder = os.path.join(
@@ -204,7 +204,7 @@ for folder in folders:
     focal_length_x = 256.0 / np.tan(np.deg2rad(90.0) / 2)
     camera_angle_x = 2 * np.arctan(width / (2 * focal_length_x))
 
-    # bbox_file_path = "/home/zubairirshad/Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
+    # bbox_file_path = "Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
 
     bbox_file_path = os.path.join(obj_obb_folder_path, folder + '.json')
     # excluded_classes = []

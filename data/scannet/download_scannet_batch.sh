@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Specify the output directory where you want to download the files
-output_dir="/data/zubair/scannet_meshes"
+output_dir="scannet_meshes"
 
 # Loop through the scenes and download the specified files
 for scene_number in {300..500}; do

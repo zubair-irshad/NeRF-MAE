@@ -626,7 +626,7 @@ if __name__ == '__main__':
     ]
 
     focal_length = K[0][0]
-    base_path = '/home/zubairirshad/Downloads/scannet_nerf_output/scene0073_00'
+    base_path = 'Downloads/scannet_nerf_output/scene0073_00'
 
     scene_path = base_path
     metadata_path = os.path.join(scene_path, 'metadata_camera_parameters.csv')

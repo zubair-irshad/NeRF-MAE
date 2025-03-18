@@ -4014,7 +4014,8 @@ if __name__ == "__main__":
     #     is_eval=False,
     # )
 
-    # backbone = SwinTransformer_FPN_Pretrained_Skip()
+    backbone = SwinTransformer_FPN_Pretrained_Skip(checkpoint_path="NeRF-MAE/checkpoints/nerf_mae_pretrained.pt", 
+                                                   is_eval=False)
 
     # backbone = SwinTransformer_VoxelSR_Skip(
     #     patch_size=[4, 4, 4],
@@ -4029,19 +4030,19 @@ if __name__ == "__main__":
 
     # backbone = SwinTransformer_VoxelSR_Pretrained_Skip(is_eval=True, out_resolution=384)
 
-    # num_params = sum(p.numel() for p in backbone.parameters() if p.requires_grad)
-    # print("num_params", num_params)
+    num_params = sum(p.numel() for p in backbone.parameters() if p.requires_grad)
+    print("num_params", num_params)
 
-    # grid = torch.randn((1, 4, 160, 160, 160))
+    grid = torch.randn((1, 4, 160, 160, 160))
 
     # # sem_feat = [torch.randn((1, 120, 106, 160)), torch.randn((1, 105, 110, 160))]
 
     # # sem_feat = [torch.randn((1, 120, 106, 160))]
 
     # vox_feat_out = torch.randn((1, 4, 384, 384, 384))
-    # out = backbone(grid)
+    out = backbone(grid)
 
-    # print("out", out.shape)
+    print("out", out[0].shape)
 
     # loss = backbone.loss_fn(vox_feat_out, out)
 
@@ -4051,28 +4052,28 @@ if __name__ == "__main__":
 
     # print("metrics", metrics["MSE"], metrics["PSNR"])
 
-    backbone = SwinTransformer_FPN(
-        patch_size=[4, 4, 4],
-        embed_dim=swin[backbone_type]["embed_dim"],
-        depths=swin[backbone_type]["depths"],
-        num_heads=swin[backbone_type]["num_heads"],
-        window_size=[4, 4, 4],
-        stochastic_depth_prob=0.1,
-        expand_dim=True,
-    )
+    # backbone = SwinTransformer_FPN(
+    #     patch_size=[4, 4, 4],
+    #     embed_dim=swin[backbone_type]["embed_dim"],
+    #     depths=swin[backbone_type]["depths"],
+    #     num_heads=swin[backbone_type]["num_heads"],
+    #     window_size=[4, 4, 4],
+    #     stochastic_depth_prob=0.1,
+    #     expand_dim=True,
+    # )
 
-    total_params = 0
-    for i, stage in enumerate(backbone.stages):
-        num_params = sum(p.numel() for p in stage.parameters() if p.requires_grad)
-        total_params += num_params
-        print(f"Stage {i+1} - num_params: {num_params}")
+    # total_params = 0
+    # for i, stage in enumerate(backbone.stages):
+    #     num_params = sum(p.numel() for p in stage.parameters() if p.requires_grad)
+    #     total_params += num_params
+    #     print(f"Stage {i+1} - num_params: {num_params}")
 
-    print("Number of Swin parameters:", total_params)
+    # print("Number of Swin parameters:", total_params)
 
-    num_params = sum(p.numel() for p in backbone.parameters() if p.requires_grad)
-    print("num_params", num_params)
+    # num_params = sum(p.numel() for p in backbone.parameters() if p.requires_grad)
+    # print("num_params", num_params)
 
-    grid = torch.randn((2, 4, 160, 160, 160)).cuda()
-    backbone = backbone.cuda()
+    # grid = torch.randn((2, 4, 160, 160, 160)).cuda()
+    # backbone = backbone.cuda()
 
-    out = backbone(grid)
+    # out = backbone(grid)

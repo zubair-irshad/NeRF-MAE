@@ -46,11 +46,11 @@ def worker(
     gpu: int,
 ) -> None:
     data_path = (
-        "/home/ubuntu/zubair/NeRF_MAE/data/scannet/scannet_nerf_output_all/scannet_nerf"
+        "NeRF_MAE/data/scannet/scannet_nerf_output_all/scannet_nerf"
     )
-    out_dir = "/home/ubuntu/zubair/NeRF_MAE/data/scannet/scannet_rpn_out_all"
-    ckpt_dir = "/home/ubuntu/zubair/NeRF_MAE/data/scannet/out_checkpoints"
-    bbox_dir = "/data/zubair/scannet_boxes/"
+    out_dir = "NeRF_MAE/data/scannet/scannet_rpn_out_all"
+    ckpt_dir = "NeRF_MAE/data/scannet/out_checkpoints"
+    bbox_dir = "scannet_boxes/"
 
     while True:
         scene = queue.get()
@@ -92,9 +92,9 @@ if __name__ == "__main__":
     queue = multiprocessing.JoinableQueue()
     count = multiprocessing.Value("i", 0)
 
-    # data_path = "/wild6d_data/zubair/FRONT3D_render"
+    # data_path = "FRONT3D_render"
     data_path = (
-        "/home/ubuntu/zubair/NeRF_MAE/data/scannet/scannet_nerf_output_all/scannet_nerf"
+        "NeRF_MAE/data/scannet/scannet_nerf_output_all/scannet_nerf"
     )
     scenes = os.listdir(data_path)
     scenes = [s for s in scenes if os.path.isdir(os.path.join(data_path, s))]

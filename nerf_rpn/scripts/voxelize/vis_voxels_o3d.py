@@ -5,7 +5,7 @@ import os
 import sys
 import torch
 
-sys.path.append("/home/zubairirshad/NeRF_MAE_internal/nerf_mae")
+sys.path.append("NeRF_MAE_internal/nerf_mae")
 
 from model.mae.torch_utils import *
 from model.mae.viz_utils import *
@@ -75,9 +75,9 @@ def write_ply(voxel, path, colors):
                         f.write("\n")
 
 scene_name = '3dfront_0037_00'
-# folder_dir = '/home/zubairirshad/Downloads/ckpts_nerf_mae/front3d_voxelSem_3.5k_0.75_aug_loss_mask_skip_normden/voxel_outputs'
+# folder_dir = 'Downloads/ckpts_nerf_mae/front3d_voxelSem_3.5k_0.75_aug_loss_mask_skip_normden/voxel_outputs'
 
-folder_dir = '/home/zubairirshad/Downloads/ckpts_nerf_mae/front3d_voxelSem_3.5k_0.75_aug_loss_mask_skip_normden_NOPT/voxel_outputs'
+folder_dir = 'Downloads/ckpts_nerf_mae/front3d_voxelSem_3.5k_0.75_aug_loss_mask_skip_normden_NOPT/voxel_outputs'
 os.makedirs(os.path.join(folder_dir,scene_name),exist_ok=True)
 voxel_feat_path = os.path.join(folder_dir, scene_name+'.npy')
 
@@ -91,7 +91,7 @@ print("unique labels in feat_gt", np.unique(feat_gt))
 print("unique labels in feat", np.unique(feat))
 
 
-nerf_rpn_masks = '/home/zubairirshad/Downloads/masks'
+nerf_rpn_masks = 'Downloads/masks'
 nerf_rpn_path = os.path.join(nerf_rpn_masks, scene_name+'.npy')
 
 nerf_rpn_mask = np.load(nerf_rpn_path)
@@ -161,7 +161,7 @@ o3d.visualization.draw_geometries([pcd_gt, mesh])
 o3d.visualization.draw_geometries([pcd, mesh])
 
 
-input_feat_dir = '/home/zubairirshad/Downloads/front3d_rpn_data/features'
+input_feat_dir = 'Downloads/front3d_rpn_data/features'
 resolution = 160
 new_res = np.array([resolution, resolution, resolution])
 features_path = os.path.join(input_feat_dir, scene_name + ".npz")

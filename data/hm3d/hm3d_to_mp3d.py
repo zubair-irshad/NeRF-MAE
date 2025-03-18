@@ -59,7 +59,7 @@ def get_boxes(box_file_path):
 
     return extents, rotations, translations
 
-hm3d_to_mp3d_path = "/home/zubairirshad/NeRF_MAE_internal/data/hm3d/matterport_category_mappings.tsv"
+hm3d_to_mp3d_path = "NeRF_MAE_internal/data/hm3d/matterport_category_mappings.tsv"
 df = pd.read_csv(hm3d_to_mp3d_path, sep="    ", header=0, engine="python")
 # hm3d_to_mp3d = {row["category"]: row["mpcat40index"] for _, row in df.iterrows()}
 hm3d_to_nyu40 = {row["category"]: row["nyu40id"] for _, row in df.iterrows()}
@@ -89,7 +89,7 @@ nyu40_id_label = {1: 'wall', 8: 'door', 22: 'ceiling', 2: 'floor', 11: 'picture'
 # mp3d_id_to_category = {1: 'wall', 4: 'door', 17: 'ceiling', 2: 'floor', 6: 'picture', 9: 'window', 3: 'chair', 0: 'void', 8: 'cushion', 39: 'objects', 28: 'lighting', 7: 'cabinet', 12: 'curtain', 5: 'table', 14: 'plant', 21: 'mirror', 20: 'towel', 15: 'sink', 31: 'shelving', 10: 'sofa', 11: 'bed', 13: 'chest_of_drawers', 18: 'toilet', 24: 'column', 30: 'railing', 16: 'stairs', 19: 'stool', 22: 'tv_monitor', 41: 'unlabeled', 23: 'shower', 26: 'counter', 34: 'seating', 27: 'fireplace', 38: 'clothes', 25: 'bathtub', 29: 'beam', 40: 'misc', 37: 'appliances', 36: 'furniture', 32: 'blinds', 35: 'board_panel', 33: 'gym_equipment'}
 
 instance_name = '00009-vLpv2VX547B_10'
-box_file_path = os.path.join('/home/zubairirshad/Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis', instance_name + '.json')
+box_file_path = os.path.join('Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis', instance_name + '.json')
 
 with open(box_file_path, 'r') as bbox_file:
     bbox_data = json.load(bbox_file)
@@ -105,5 +105,5 @@ for bbox_info in bbox_data:
     nyu40_label = nyu40_id_label.get(int(class_name_nyu40), None)
     print("nyu40_label", nyu40_label)
     
-# # bbox_file_path = "/home/zubairirshad/Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
+# # bbox_file_path = "Downloads/objects_bboxes_per_room/new_single_room_bboxes_replace_nofilterdetected_all_concepts_replace_revised_axis/00891-cvZr5TUy5C5_6.json"
 # extents, rotations, translations = get_boxes(box_file_path)

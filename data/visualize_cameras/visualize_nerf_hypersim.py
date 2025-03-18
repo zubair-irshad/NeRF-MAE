@@ -521,7 +521,7 @@ def visualize_cameras(colored_camera_dicts, sphere_radius, focal, bounding_boxes
 if __name__ == '__main__':
     import os
 
-    base_path = '/home/zubairirshad/Downloads/ai_002_005'
+    base_path = 'Downloads/ai_002_005'
 
     scene_path = base_path
     metadata_path = os.path.join(scene_path, 'metadata_camera_parameters.csv')

@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import os
 import sys
 import random
-sys.path.append("/home/zubairirshad/NeRF_MAE_internal/nerf_mae")
+sys.path.append("NeRF_MAE_internal/nerf_mae")
 from model.mae.torch_utils import *
 # from model.mae.viz_utils import *
 import trimesh
@@ -162,10 +162,10 @@ def window_masking_3d(
 
 if __name__ == "__main__":
     # dataset = "front3d"
-    # folder_name = "/home/zubairirshad/Downloads/front3d_rpn_data"
+    # folder_name = "Downloads/front3d_rpn_data"
     # filename = "3dfront_0117_00"
 
-    filename = '/home/zubairirshad/Downloads/voxel_grid_cups.npy'
+    filename = 'Downloads/voxel_grid_cups.npy'
 
     voxel_grid = np.load(filename)
     print("voxel_grid", voxel_grid.shape)
@@ -200,13 +200,13 @@ if __name__ == "__main__":
     # draw({'geometry': pcd, 'name':name })
 
     # dataset = "scannet"
-    # folder_name = '/home/zubairirshad/Downloads/scannet_rpn_data'
+    # folder_name = 'Downloads/scannet_rpn_data'
     # filename = 'scene0000_00'
 
-    # folder_name = "/home/zubairirshad/Downloads/front3d_rpn_data/vis_scenes"
+    # folder_name = "Downloads/front3d_rpn_data/vis_scenes"
     # filename = "3dfront_0023_00"
 
-    # folder_name = "/home/zubairirshad/Downloads/hypersim_rpn_data"
+    # folder_name = "Downloads/hypersim_rpn_data"
     # filename = "ai_018_001"
     # hypersim = False
     # resolution = 160
@@ -272,7 +272,7 @@ if __name__ == "__main__":
 
     test_2d = False
     if test_2d:
-        img = Image.open("/home/zubairirshad/Downloads/dog-cat.jpg")
+        img = Image.open("Downloads/dog-cat.jpg")
         transform = transforms.Compose(
             [transforms.ToTensor(), transforms.CenterCrop(224)]
         )
